@@ -2,4 +2,5 @@
 [github](https://github.com/Nparson88/Password-generator)
 # random password generator assignment
 [Password-generator](file:///E:/Password-generator/index.html)
-![website](./Screenshot-(30).png)
+![screenshot of website](screenshot.png)
+[website](https://nparson88.github.io/Password-generator/)
