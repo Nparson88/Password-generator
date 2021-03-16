@@ -37,7 +37,7 @@ var getPasswordParameters = function () {
     alert("max password length is 128 characters")
     return;
   }
-// the user is asked to confirm what types of characters they would like in their password
+  // the user is asked to confirm what types of characters they would like in their password
   var uppercaseConfirm = confirm("Would you like to use uppercase letters?")
   if (uppercaseConfirm === true) {
     // alerts made to confirm what the user has chosen 
@@ -64,13 +64,13 @@ var getPasswordParameters = function () {
   } else {
     alert("Numbers will not be used")
 
-  } 
+  }
   // object that takes in data from the user's choices
-   var passwordParameters = {
+  var passwordParameters = {
     length: passwordLength, uppercaseConfirm: uppercaseConfirm, lowercaseConfirm: lowercaseConfirm, specialConfirm: specialConfirm,
     numericConfirm: numericConfirm
   };
- 
+
   // if the user doesnt confirm at least 1 type of the characters provided the user will be alerted and the function will stop
   if (uppercaseConfirm !== true && lowercaseconfirm !== true && specialConfirm !== true & numericConfirm !== true
   ) {
@@ -78,7 +78,7 @@ var getPasswordParameters = function () {
 
     return;
   }
- return passwordParameters;
+  return passwordParameters;
 
 }
 // function that generates the password based on the user input 
@@ -113,11 +113,11 @@ var generatePassword = function () {
     allCharacters = allCharacters.concat(numericCharacters);
     usedCharacters.push(random(numericCharacters));
   } //for loop that combines thhe characters used with the user inputed length 
-  for (var i = 0; i < options.length; i++) {
+  for (var i = 0; i < characterOptions.length; i++) {
     var chosenCharacter = random(allCharacters);
     result.push(chosenCharacter);
   }
- //for loop thats adds at least 1 character from each selected character type
+  //for loop thats adds at least 1 character from each selected character type
   for (var i = 0; i < usedCharacters.length; i++) {
     result[i] = usedCharacters[i];
   }// turns result into a string text
